@@ -34,5 +34,17 @@ function novaLinha(usuario,numPalavra,numCarac){
 
 function removeLinha(){
     event.preventDefault();
-    $(this).parent().parent().remove();
+    linha=$(this).parent().parent();
+    linha.fadeOut();
+    setTimeout(function(){
+        linha.remove();
+    },2000);
+};
+
+$("#botao-placar").click(mostraPlacar);
+
+function mostraPlacar(){
+
+    $(".placar").slideToggle(1000);
+
 };
