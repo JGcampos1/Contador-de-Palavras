@@ -5,7 +5,7 @@ $(function () {
     atualizaTamanhoFrase();
     inicializaContadores();
     inicializaCronometro();
-    incializaMarcadores();
+    inicializaMarcadores();
     $("#botao-reiniciar").click(reiniciaJogo);
 })
 
@@ -16,7 +16,17 @@ function atualizaTamanhoFrase() {
     var tamanhoFrase = $("#tamanho-frase");
     tamanhoFrase.text(numPalavra);
 
+    console.log(numPalavra  )
+
 }
+
+function atualizaTempo(tempo) {
+    tempoInicial = tempo
+    $("#tempo-digitacao").text(tempo);
+
+}
+
+
 
 function inicializaContadores() {
 
@@ -30,9 +40,12 @@ function inicializaContadores() {
     });
 }
 
-function incializaMarcadores() {
-    var frase = $(".frase").text()
-    campo.on("input", function () {
+function inicializaMarcadores() {
+    campo.on("input", function() {
+        var frase = $(".frase").text();
+        console.log(frase);
+        
+
         var digitado = campo.val();
         var comparavel = frase.substr(0, digitado.length);
 
@@ -47,9 +60,8 @@ function incializaMarcadores() {
 }
 
 function inicializaCronometro() {
-
-    var tempoRestante = $("#tempo-digitacao").text();
-    campo.one("focus", function () {
+    campo.one("focus", function() {
+        var tempoRestante = $("#tempo-digitacao").text();
         var cronometroId = setInterval(function () {
             tempoRestante--;
             $("#tempo-digitacao").text(tempoRestante);
@@ -57,7 +69,7 @@ function inicializaCronometro() {
                 clearInterval(cronometroId);
                 finalizaJogo();
             }
-            
+
         }, 1000);
     })
 }
@@ -66,6 +78,8 @@ function finalizaJogo() {
     campo.addClass("campo-desativado");
     inserePlacar();
 }
+
+
 function reiniciaJogo() {
 
     campo.attr("disabled", false);
@@ -76,7 +90,9 @@ function reiniciaJogo() {
     campo.removeClass("campo-desativado");
     campo.removeClass("borda-verde");
     campo.removeClass("borda-vermelha");
-    inicializaCronometro()
+    inicializaCronometro();
+    $(".nome-Iput").focus();
+    $(".nome-Iput").val("");
 }
 
 

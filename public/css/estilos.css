@@ -4,6 +4,7 @@ body{
 }
 .frase{
     font-size: 20px;
+    text-align: center;
 }
 .campo-digitacao{
     font-size: 20px;
@@ -21,29 +22,24 @@ body{
 .botao{
     display: block;
     width: 150px;
-    height: 70px;
+    height: 60px;
     margin: 20px 20px;
-    background-color: orange;
     font-weight: bold;
-    border-radius: solid 1px orange;
+    border-radius: solid 1px rgb(3, 3, 3);
     border-radius: 15px;
     transition: 1s;
-    box-shadow: 2px 2px 2px 0.5px rgba(0, 0, 0, 0.2);
-}
-.botao{
     font-size: 19px;
     background-color:rgb(235, 94, 0);
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
     
-    width: 152px;
-    height: 72px;
 }
-.borda-verde{
-    border:3px solid green;
+.botao:hover{
+    box-shadow: 3px 3px 3px 4px rgba(0, 0, 0, 0.5);
+
 }
-.borda-vermelha{
-    border:3px solid red;
-    
+#botão-frase{
+    background-color: purple;
+
 }
 #botao-placar{
     background-color: green;
@@ -54,4 +50,23 @@ body{
 }
 .placar{
     display:none;
+}
+
+.nome-Label{
+    font-size:20px;
+    color: black;
+}
+.nome-Iput{
+    font-size:20px;
+
+}
+.borda-verde {
+    borda : 3 px em verde sólido;
+}
+.borda-verde{
+    border:3px solid green;
+}
+.borda-vermelha{
+    border:3px solid red;
+    
 }

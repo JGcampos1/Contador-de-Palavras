@@ -1,13 +1,16 @@
 function inserePlacar() {
     var corpoTabela = $(".placar").find("tbody");
-    var usuario = "JG";
+    var usuario = $(".nome-Iput").val();
     var numPalavras = $("#contador-palavras").text();
     var numCarac = $("#contador-caracteres").text();
-
+        
     var linha = novaLinha(usuario,numPalavras,numCarac);
     linha.find(".botao-remover").click(removeLinha)
 
     corpoTabela.append(linha);
+    $(".placar").slideToggle(500);
+    scrollPlacar();
+
 }
 
 function novaLinha(usuario,numPalavra,numCarac){
@@ -44,7 +47,14 @@ function removeLinha(){
 $("#botao-placar").click(mostraPlacar);
 
 function mostraPlacar(){
-
-    $(".placar").slideToggle(1000);
-
+    $(".placar").stop().slideToggle(1000);
 };
+
+function scrollPlacar() {
+    var posicaoPlacar = $(".placar").offset().top;
+
+    $("html, body").animate(
+    {
+        scrollTop: posicaoPlacar
+    }, 1000);
+}
