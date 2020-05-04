@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(205, 244, 251);
+    background-color: rgb(240, 253, 255);
     overflow: scroll;
 }
 .frase{
@@ -37,7 +37,7 @@ body{
     box-shadow: 3px 3px 3px 4px rgba(0, 0, 0, 0.5);
 
 }
-#botão-frase{
+#botao-frase{
     background-color: purple;
 
 }
@@ -61,7 +61,7 @@ body{
 
 }
 .borda-verde {
-    borda : 3 px em verde sólido;
+    border : 3 px em verde sólido;
 }
 .borda-verde{
     border:3px solid green;
@@ -69,4 +69,11 @@ body{
 .borda-vermelha{
     border:3px solid red;
     
+}
+#erro{
+    color: red;
+    display:none
+}
+#spinner{
+    display: none;
 }

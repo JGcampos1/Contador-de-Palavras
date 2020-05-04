@@ -9,10 +9,17 @@
 </head>
 <body>
     <div class="container">
-
+        
         <h1 class="center">Contador de Palavras</h1>
         <p class="frase">Um computador permite que você faça mais erros mais rapidamente do que qualquer outra invenção da história da humanidade, com exceção das mãos e da tequila.</p>
         <ul class="informacoes center">
+
+            <div id="center">
+                <img src="img/spinner.gif" alt="barra de carregamento" id="spinner">
+                <p id="erro">Ocorreu um erro, tente novamente</p>
+            
+            </div>
+            
             <li >
                 <i class="small material-icons icones">description</i>
                 <spam id="tamanho-frase">5</spam> palavras
@@ -30,7 +37,6 @@
         </div>
         
         <textarea class="campo-digitacao"  cols="30" rows="10"></textarea>
-        
         
     <div class="botoes">
         <button class="botao"id="botao-reiniciar">Reiniciar Jogo</button>
