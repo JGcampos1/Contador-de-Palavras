@@ -7,6 +7,8 @@ $(function () {
     inicializaCronometro();
     inicializaMarcadores();
     $("#botao-reiniciar").click(reiniciaJogo);
+
+    atualizaPlacar();
 })
 
 function atualizaTamanhoFrase() {
@@ -16,7 +18,6 @@ function atualizaTamanhoFrase() {
     var tamanhoFrase = $("#tamanho-frase");
     tamanhoFrase.text(numPalavra);
 
-    console.log(numPalavra  )
 
 }
 
@@ -43,7 +44,6 @@ function inicializaContadores() {
 function inicializaMarcadores() {
     campo.on("input", function() {
         var frase = $(".frase").text();
-        console.log(frase);
         
 
         var digitado = campo.val();
@@ -91,8 +91,8 @@ function reiniciaJogo() {
     campo.removeClass("borda-verde");
     campo.removeClass("borda-vermelha");
     inicializaCronometro();
-    $(".nome-Iput").focus();
-    $(".nome-Iput").val("");
+    $(".nome-iput").focus();
+    $(".nome-iput").val("");
 }
 
 
